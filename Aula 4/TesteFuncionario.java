@@ -51,15 +51,47 @@ class TestaFuncionario{
 		funcionario5.RG = "123456";
 		funcionario5.salario = 1500.00;
 		
-		funcionario5.mostra();
+		//funcionario5.mostra();
 		
 		Data data = new Data(15, 01, 2010);
 		funcionario5.dataEntrada = data;
 		
-		funcionario5.mostra();
+		Funcionario funcionario4 = new Funcionario();
 		
-		Funcionario.salario = 1234;
+		funcionario4.nome = "Elton Ferreira";
+		funcionario4.RG = "123456";
+		funcionario4.salario = 1500.00;
 		
-		Funcionario.calculoGanhoAnual();
+		Data data2 = new Data(01, 11, 2015);
+		funcionario4.dataEntrada = data2;
+		
+		Funcionario funcionario3 = new Funcionario();
+		
+		funcionario3.nome = "Maria Ferreira";
+		funcionario3.RG = "128949516";
+		funcionario3.salario = 3000.00;
+		
+		Data data3 = new Data(03, 03, 2003);
+		funcionario3.dataEntrada = data3;
+		
+		//funcionario5.mostra();
+		
+		//Funcionario.salario = 1234;
+		
+		//Funcionario.calculoGanhoAnual();
+		
+		Empresa empresa = new Empresa();
+		empresa.funcionarios = new Funcionario[10];
+		
+		//empresa.funcionarios = new Funcionario();
+		//empresa.funcionarios[0] = funcionario5;
+		empresa.adiciona(funcionario5);
+		empresa.adiciona(funcionario4);
+		empresa.adiciona2(funcionario3);
+		empresa.nome = "Teste";
+		empresa.cnpj = "12345891";
+		
+		empresa.mostraFuncionarios();
+		
 	}
 }
