@@ -74,6 +74,15 @@ class TestaFuncionario{
 		Data data3 = new Data(03, 03, 2003);
 		funcionario3.dataEntrada = data3;
 		
+		Funcionario funcionario2 = new Funcionario();
+		
+		funcionario2.nome = "Maria Ferreira";
+		funcionario2.RG = "128949516";
+		funcionario2.salario = 3000.00;
+		
+		Data data5 = new Data(03, 03, 2003);
+		funcionario2.dataEntrada = data5;
+		
 		//funcionario5.mostra();
 		
 		//Funcionario.salario = 1234;
@@ -92,6 +101,9 @@ class TestaFuncionario{
 		empresa.cnpj = "12345891";
 		
 		empresa.mostraFuncionarios();
+		
+		System.out.println(empresa.contem(funcionario3));
+		System.out.println(empresa.contem(funcionario2));
 		
 	}
 }

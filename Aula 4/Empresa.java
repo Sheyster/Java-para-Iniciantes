@@ -6,24 +6,35 @@ class Empresa {
 	boolean cadastrado = false;
 	
 	void adiciona(Funcionario f){
-		funcionarios[contador] =f;
-		contador++;
+		this.funcionarios[contador] =f;
+		this.contador++;
 	}
 	
 	void adiciona2(Funcionario f){
-		for(int i = 0; i <= funcionarios.length -1; i++){
-			if(funcionarios[i] == null && !cadastrado){
-				funcionarios[i] = f;
-				cadastrado = true;
+		for(int i = 0; i <= this.funcionarios.length -1; i++){
+			if(this.funcionarios[i] == null && !this.cadastrado){
+				this.funcionarios[i] = f;
+				this.cadastrado = true;
 			}
 		}
 	}
 	
 	void mostraFuncionarios(){
-		for(int i = 0; i <= funcionarios.length -1; i++){
-			if(funcionarios[i] != null){
-				funcionarios[i].mostra();
+		for(int i = 0; i <= this.funcionarios.length -1; i++){
+			if(this.funcionarios[i] != null){
+				this.funcionarios[i].mostra();
 			}
 		}
+	}
+	
+	boolean contem(Funcionario f){
+		for(int i = 0; i <= this.funcionarios.length -1; i++){
+			if(this.funcionarios[i] != null){
+				if(f == this.funcionarios[i]){
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 }
